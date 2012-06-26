@@ -28,5 +28,7 @@ Example commit log
 > - of a list of items that are relevant to this commit
 > We can use - or * for bullets
 
+Updates to this file
+--------------------
 
 This guide should be kept pretty simple and not too wordy(which is probably is already). updates welcome.
