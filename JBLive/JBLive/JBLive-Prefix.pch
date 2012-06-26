@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JBLive' target in the 'JBLive' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
