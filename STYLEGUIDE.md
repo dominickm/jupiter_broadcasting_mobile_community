@@ -9,14 +9,9 @@ However, anything found in this doc will supercede Google's guide.
 
 Braces: 
 
-Please place all braces on the same line as the statement for instance
-  if (true) {
-  }
-is the correct format, but 
-  if (false)
-  {
-  }
-is not. This goes for 'for' loops and the like as well. 
+Please place all braces on the same line as the statement or conditional.
+
+This goes for 'for' loops and the like as well. 
 
 Variables:
 
