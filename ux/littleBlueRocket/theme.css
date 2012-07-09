@@ -1,0 +1,279 @@
+/*
+	Copyright [2012] [Fingertip Tech, INC]
+
+	 Licensed under the Apache License, Version 2.0 (the "License");
+	 you may not use this file except in compliance with the License.
+	 You may obtain a copy of the License at
+
+		   http://www.apache.org/licenses/LICENSE-2.0
+
+	 Unless required by applicable law or agreed to in writing, software
+	 distributed under the License is distributed on an "AS IS" BASIS,
+	 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 See the License for the specific language governing permissions and
+	 limitations under the License.
+ */
+/* Custom Font*/
+@font-face {
+    font-family: 'UbuntuMonoRegular';
+    src: url('UbuntuMono-R-webfont.eot');
+    src: url('UbuntuMono-R-webfont.eot?#iefix') format('embedded-opentype'),
+         url('UbuntuMono-R-webfont.woff') format('woff'),
+         url('UbuntuMono-R-webfont.ttf') format('truetype'),
+         url('UbuntuMono-R-webfont.svg#UbuntuMonoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuMonoItalic';
+    src: url('UbuntuMono-RI-webfont.eot');
+    src: url('UbuntuMono-RI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('UbuntuMono-RI-webfont.woff') format('woff'),
+         url('UbuntuMono-RI-webfont.ttf') format('truetype'),
+         url('UbuntuMono-RI-webfont.svg#UbuntuMonoItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuMonoBold';
+    src: url('UbuntuMono-B-webfont.eot');
+    src: url('UbuntuMono-B-webfont.eot?#iefix') format('embedded-opentype'),
+         url('UbuntuMono-B-webfont.woff') format('woff'),
+         url('UbuntuMono-B-webfont.ttf') format('truetype'),
+         url('UbuntuMono-B-webfont.svg#UbuntuMonoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UbuntuMonoBoldItalic';
+    src: url('UbuntuMono-BI-webfont.eot');
+    src: url('UbuntuMono-BI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('UbuntuMono-BI-webfont.woff') format('woff'),
+         url('UbuntuMono-BI-webfont.ttf') format('truetype'),
+         url('UbuntuMono-BI-webfont.svg#UbuntuMonoBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #010101;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'UbuntuMonoRegular';
+	font-size: 14px;
+}
+/* Used for size calculations*/
+.frame {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+}
+.icon64 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 16px;
+	width: 16px;
+	clear:both;
+	display:block; 
+}
+.icon24 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 24px;
+	width: 24px;
+	display: block;
+	text-align: center;
+}
+.icon32 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 32px;
+	width: 32px;
+	clear:both;
+	display:block; 
+}
+.icon48 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 48px;
+	width: 48px;
+	clear:both;
+	display:block; 
+}
+.icon64 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 64px;
+	width: 64px;
+	clear:both;
+	display:block; 
+}
+.icon72 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 72px;
+	width: 72px;
+	clear:both;
+	display:block; 
+}
+.icon96 {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0px;
+	height: 96px;
+	width: 96px;
+	clear:both;
+	display:block; 
+}
+.toolbar {
+	background: #45484d;
+	background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%);
+	background: -o-linear-gradient(top,  #45484d 0%,#000000 100%);
+	background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%);
+	background: linear-gradient(to bottom,  #45484d 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+	margin: 0px;
+	padding: 0px;
+	height: 56px;
+	overflow: hidden;
+}
+.toolbarhr {
+	height: 2px;
+	background: #6392ff;
+	color: #6392ff;
+}
+.hr {
+	height: 2px;
+	background: #a1a1a1;
+	color: #a1a1a1;
+}
+.tab {
+	margin:0px;
+	padding: 0px 4px 0px 4px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99bdff', endColorstr='#8bb4ff',GradientType=0 );
+	height: 56px;
+	line-height: 20px;
+	min-width: 64px;
+	border: 1px solid #ccc;
+	cursor: default;
+	display: inline-block;
+	text-align: center;
+	transition: background 0.5s, border 0.5s,color 0.5s;
+	-moz-transition:  background 0.5s, border 0.5s,color 0.5s; /* Firefox 4 */
+	-webkit-transition:  background 0.5s, border 0.5s,color 0.5s; /* Safari and Chrome */
+	-o-transition:  background 0.5s, border 0.5s,color 0.5s; /* Opera */
+}
+.tab:active {
+	border: 1px solid #ffdb99;
+	background: #ffdb99;
+	background: -moz-linear-gradient(top,  #ffdb99 0%, #ffd483 50%, #ffcb69 51%, #ffd68b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffdb99), color-stop(50%,#ffd483), color-stop(51%,#ffcb69), color-stop(100%,#ffd68b));
+	background: -webkit-linear-gradient(top,  #ffdb99 0%,#ffd483 50%,#ffcb69 51%,#ffd68b 100%);
+	background: -o-linear-gradient(top,  #ffdb99 0%,#ffd483 50%,#ffcb69 51%,#ffd68b 100%);
+	background: -ms-linear-gradient(top,  #ffdb99 0%,#ffd483 50%,#ffcb69 51%,#ffd68b 100%);
+	background: linear-gradient(to bottom,  #ffdb99 0%,#ffd483 50%,#ffcb69 51%,#ffd68b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdb99', endColorstr='#ffd68b',GradientType=0 );
+}
+.tabcurrent {
+	margin: 0;
+	padding: 0px 4px 0px 4px;
+	height: 56px;
+	line-height: 20px;
+	display: inline-block;
+	min-width: 64px;
+	border: 1px solid #58B;
+	transition: border 0.5s, color 0.5s;
+	color: #f6f6f6;
+	text-align: center;
+	cursor: default;
+	background: #719cff;
+	background: -moz-linear-gradient(top,  #719cff 0%, #5d8eff 50%, #457dff 51%, #6392ff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#719cff), color-stop(50%,#5d8eff), color-stop(51%,#457dff), color-stop(100%,#6392ff));
+	background: -webkit-linear-gradient(top,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	background: -o-linear-gradient(top,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	background: -ms-linear-gradient(top,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	background: linear-gradient(to bottom,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#719cff', endColorstr='#6392ff',GradientType=0 );
+	transition: background 0.5s, border 0.5s,color 0.5s;
+	-moz-transition:  background 0.5s, border 0.5s,color 0.5s; /* Firefox 4 */
+	-webkit-transition:  background 0.5s, border 0.5s,color 0.5s; /* Safari and Chrome */
+	-o-transition:  background 0.5s, border 0.5s,color 0.5s; /* Opera */
+}
+.albumart {
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 4px;
+	width: 96px;
+	height: 96px;
+	border: solid 1px #6392ff;
+}
+.titlebox {
+	margin-left: auto;
+    margin-right: auto;
+	padding: 4px;
+	color: #a1a1a1;
+	font-size: 16px;
+	text-align: center;
+
+}
+.button {
+	margin: 2px;
+	border: 1px solid #ccc;
+	line-height: 24px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;;
+	border-radius:8px;
+	display: inline-block;
+	overflow: hidden;
+	font-size: 14px;
+	font-family: 'UbuntuMonoRegular';
+	cursor: default;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+}
+.button:active {
+	border: 1px solid #3f87d0;
+	color: #f6f6f6;
+	background: #719cff;
+	background: -moz-linear-gradient(top,  #719cff 0%, #5d8eff 50%, #457dff 51%, #6392ff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#719cff), color-stop(50%,#5d8eff), color-stop(51%,#457dff), color-stop(100%,#6392ff));
+	background: -webkit-linear-gradient(top,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	background: -o-linear-gradient(top,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	background: -ms-linear-gradient(top,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	background: linear-gradient(to bottom,  #719cff 0%,#5d8eff 50%,#457dff 51%,#6392ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#719cff', endColorstr='#6392ff',GradientType=0 );
+}
+.centered {
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: 64px;
+}
