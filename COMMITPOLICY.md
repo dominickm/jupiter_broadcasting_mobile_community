@@ -31,4 +31,4 @@ Example commit log
 Updates to this file
 --------------------
 
-This guide should be kept pretty simple and not too wordy(which is probably is already). Updates welcome.
+This guide should be kept pretty simple and not too wordy (which it probably is already). Updates welcome.
