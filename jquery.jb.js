@@ -33,6 +33,22 @@ var jb = {
 		"get" : function () {
 			"use strict";
 		}
+	},
+	series : {
+		get : function () {
+			"use strict";
+			var callback = function () {
+				"use strict";
+				$('div#series-holder > ul#series-list').listview();
+			}
+			var url = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
+			$('div#series-holder').rss(url, {
+				layoutTemplate: '<ul data-role=\"listview\" data-theme=\"g\" id=\"series-list\">{entries}</ul>',
+				entryTemplate: '<li><h2>{title}</h2><p>{shortBody}</p></li>'
+			}, 
+			callback);
+		},
+		firstGet : true
 	}
 };
 //jb.player.play();
