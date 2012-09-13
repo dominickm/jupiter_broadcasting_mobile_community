@@ -16,7 +16,7 @@ Copyright [2012] [Fingertip Tech, INC]
 */
 // use JB Namespace to prevent naming conflicts
 var jb = {
-	player : {
+	"player" : {
 		"isPlaying": false,
 		"url" : null,
 		"play" : function () {
@@ -29,26 +29,25 @@ var jb = {
 			"use strict";
 		}
 	},
-	url : {
+	"url" : {
 		"get" : function () {
 			"use strict";
 		}
 	},
-	series : {
-		get : function () {
+	"latest" : {
+		"get" : function () {
 			"use strict";
 			var callback = function () {
 				"use strict";
-				$('div#series-holder > ul#series-list').listview();
+				$('div#latest-holder > ul#latest-list').listview();
 			}
 			var url = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
-			$('div#series-holder').rss(url, {
-				layoutTemplate: '<ul data-role=\"listview\" data-theme=\"g\" id=\"series-list\">{entries}</ul>',
-				entryTemplate: '<li><h2>{title}</h2><p>{shortBody}</p></li>'
+			$('div#latest-holder').rss(url, {
+				layoutTemplate: '<ul data-role=\"listview\" data-theme=\"a\" id=\"latest-list\">{entries}</ul>',
+				entryTemplate: '<li data-icon="play"><a href="#{title}" class="ui-link-inherit"><img src="./images/icon-disk.png" class="ui-li-thumb"><h3 class="ui-li-heading">{title}</h3><p class="ui-li-desc">{shortBody}</p></a></li>'
 			}, 
 			callback);
 		},
-		firstGet : true
+		"firstGet" : true
 	}
 };
-//jb.player.play();

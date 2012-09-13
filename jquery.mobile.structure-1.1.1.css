@@ -995,3 +995,4 @@ span.ui-slider-label { position: absolute; text-align: center; width: 100%; over
 span.ui-slider-label-a { z-index: 1; left: 0; text-indent: -1.5em; }
 span.ui-slider-label-b { z-index: 0; right: 0; text-indent: 1.5em;}
 .ui-slider-inline { width: 120px; display: inline-block; }
+

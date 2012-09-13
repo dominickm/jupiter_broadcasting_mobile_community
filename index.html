@@ -23,6 +23,7 @@ Copyright [2012] [Fingertip Tech, INC]
 <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 <!-- jQuery -->
 <link rel="stylesheet" href="jquery.mobile-1.1.1.min.css">
+<link rel="stylesheet" href="jquery.mobile.customicons.css">
 <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
 <!-- jQuery Mobile Global Configuration Overrides -->
 <script>
@@ -51,15 +52,15 @@ $(document).bind("mobileinit", function(){
 
 			<div data-role="content" data-transition="fade">
 				<div><img src="images/icons-cd-case.png"></div>
-				<a id="btnPlayPauseStop" href="#" data-role="button" data-inline="true">Play</a>
+				<a id="btnPlayPauseStop" href="#" data-role="button" data-inline="true" data-icon="play" data-iconpos="notext"></a>
 			</div><!-- /content -->
 
 			<div data-role="footer" data-position="fixed" data-transition="none">
 				<div id="main-nav-bar" data-role="navbar">
 					<ul>
-						<li><a href="#now-playing" class="ui-btn-active ui-state-persist">Now Playing</a></li>
-						<li><a href="#shows">Shows</a></li>
-						<li><a href="#settings">Settings</a></li>
+						<li><a href="#now-playing" data-theme="a" class="ui-btn-active ui-state-persist"data-icon="disk" data-iconpos="top">Now Playing</a></li>
+						<li><a href="#shows" data-icon="aerial-portable" data-iconpos="top">Shows</a></li>
+						<li><a href="#settings" data-icon="speech-bubble-full" data-iconpos="top">Settings</a></li>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
@@ -74,30 +75,30 @@ $(document).bind("mobileinit", function(){
 						<div data-role="controlgroup" data-type="horizontal" data-inline="true" >
 							<a href="#" data-role="button" class="ui-btn-active ui-state-persist">Live</a>
 							<a href="#" data-role="button">All</a>
-							<a href="#series" data-role="button" id="series">Series</a>
+							<a href="#latest" data-role="button" id="latest">Latest</a>
 							<a href="#" data-role="button">Reminders</a>
 						</div>
 				</div>
 			</div><!-- /header -->
 			<div data-role="content">
 			<ul data-role="listview">
-			<li>
+			<li data-icon="play">
 				<a href="#" class="ui-link-inherit">
-					<img src="images/icons-cd-case.png" class="ui-li-icon">
+					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.AM</h3>
 					<p class="ui-li-desc">Listen Live (Low Quality)</p>
 				</a>
 			</li>
-			<li>
+			<li data-icon="play">
 				<a href="#" class="ui-link-inherit">
-					<img src="images/icons-cd-case.png" class="ui-li-icon">
+					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.FM</h3>
 					<p class="ui-li-desc">Listen Live (High Quality)</p>
 				</a>
 			</li>
-			<li>
+			<li data-icon="play">
 				<a href="#" class="ui-link-inherit">
-					<img src="images/icons-cd-case.png" class="ui-li-icon">
+					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.TV</h3>
 					<p class="ui-li-desc">Watch Live</p>
 				</a>
@@ -108,9 +109,9 @@ $(document).bind("mobileinit", function(){
 			<div data-role="footer" data-position="fixed" data-transition="none">
 				<div id="main-nav-bar" data-role="navbar">
 					<ul>
-						<li><a href="#now-playing">Now Playing</a></li>
-						<li><a href="#shows" class="ui-btn-active ui-state-persist">Shows</a></li>
-						<li><a href="#settings">Settings</a></li>
+						<li><a href="#now-playing" data-theme="a" data-icon="disk" data-iconpos="top">Now Playing</a></li>
+						<li><a href="#shows" class="ui-btn-active ui-state-persist" data-icon="aerial-portable" data-iconpos="top">Shows</a></li>
+						<li><a href="#settings" data-icon="speech-bubble-full" data-iconpos="top">Settings</a></li>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
@@ -125,49 +126,49 @@ $(document).bind("mobileinit", function(){
 			<div data-role="footer" data-position="fixed" data-transition="none">
 				<div id="main-nav-bar" data-role="navbar">
 					<ul>
-						<li><a href="#now-playing">Now Playing</a></li>
-						<li><a href="#shows">Shows</a></li>
-						<li><a href="#settings" class="ui-btn-active ui-state-persist">Settings</a></li>
+						<li><a href="#now-playing" data-theme="a" data-icon="disk" data-iconpos="top">Now Playing</a></li>
+						<li><a href="#shows" data-icon="aerial-portable" data-iconpos="top">Shows</a></li>
+						<li><a href="#settings" class="ui-btn-active ui-state-persist" data-icon="speech-bubble-full" data-iconpos="top">Settings</a></li>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
 		</div><!-- /page:Settings -->
 
-		<div id="series" data-role="page" data-dom-cache="true" data-theme="a">
+		<div id="latest" data-role="page" data-dom-cache="true" data-theme="a">
 			<div data-role="header" data-position="fixed"> 
 				<h1>Shows</h1>
 				<div data-role="header" data-position="fixed"> 
 						<div data-role="controlgroup" data-type="horizontal" data-inline="true" >
 							<a href="#shows" data-role="button">Live</a>
 							<a href="#" data-role="button">All</a>
-							<a href="#series" data-role="button" class="ui-btn-active ui-state-persist" id="series">Series</a>
+							<a href="#latest" data-role="button" class="ui-btn-active " id="latest">Latest</a>
 							<a href="#" data-role="button">Reminders</a>
 						</div>
 				</div>
 			</div><!-- /header -->
 			<div data-role="content">
-				<div id="series-holder"></div>
+				<div id="latest-holder"></div>
 			</div>
 			<div data-role="footer" data-position="fixed" data-transition="none">
 				<div id="main-nav-bar" data-role="navbar">
 					<ul>
-						<li><a href="#now-playing">Now Playing</a></li>
-						<li><a href="#shows" class="ui-btn-active ui-state-persist">Shows</a></li>
-						<li><a href="#settings">Settings</a></li>
+						<li><a href="#now-playing" data-theme="a" data-icon="disk" data-iconpos="top">Now Playing</a></li>
+						<li><a href="#shows" class="ui-btn-active ui-state-persist" data-icon="aerial-portable" data-iconpos="top">Shows</a></li>
+						<li><a href="#settings" data-icon="speech-bubble-full" data-iconpos="top">Settings</a></li>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
-		</div><!-- /page:Series -->
+		</div><!-- /page:latest -->
 
 		
 	</body>
 
 	<script type="text/javascript">
 		$(function(){
-			$('#series').click(function(){
-				if (jb.series.firstGet === true){
-					jb.series.firstGet = false;
-					jb.series.get();
+			$('#latest').click(function(){
+				if (jb.latest.firstGet === true){
+					jb.latest.firstGet = false;
+					jb.latest.get();
 				}
 			});
 		});
