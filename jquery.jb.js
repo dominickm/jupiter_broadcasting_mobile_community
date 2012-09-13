@@ -17,37 +17,37 @@ Copyright [2012] [Fingertip Tech, INC]
 // use JB Namespace to prevent naming conflicts
 var jb = {
 	player : {
-		"isPlaying": false,
-		"url" : null,
-		"play" : function () {
-			"use strict";
+		isPlaying : false,
+		url : null,
+		play : function () {
+			'use strict';
 		},
-		"stop" : function () {
-			"use strict";
+		stop : function () {
+			'use strict';
 		},
-		"pause" : function () {
-			"use strict";
+		pause : function () {
+			'use strict';
 		}
 	},
 	url : {
-		"get" : function () {
-			"use strict";
+		get : function () {
+			'use strict';
 		}
 	},
 	feed : {
 		get : function () {
-			"use strict";
-			var callback = function () {
-				"use strict";
+			'use strict';
+			var callback, feedUrl;
+			callback = function () {
 				$('div#feed-holder > ul#feed-list').listview();
-			}
-			var url = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
-			$('div#feed-holder').rss(url, {
+			};
+			feedUrl = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
+			$('div#feed-holder').rss(feedUrl, {
 				limit: 10,
 				layoutTemplate: '<ul data-role=\"listview\" data-theme=\"g\" id=\"feed-list\">{entries}</ul>',
 				entryTemplate: '<li><h2>{title}</h2><p>{shortBody}</p></li>'
-			}, 
-			callback);
+			},
+				callback);
 		},
 		firstGet : true
 	}
