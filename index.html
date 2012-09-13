@@ -19,11 +19,11 @@ Copyright [2012] [Fingertip Tech, INC]
 <meta name="description" content="Jupiter Broadcasting Mobile Community Application 1.0">
 <!-- View port fix -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Cordova/PhoneGap -->
-<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+<!-- Cordova/PhoneGap 
+<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script> -->
 <!-- jQuery -->
 <link rel="stylesheet" href="jquery.mobile-1.1.1.min.css">
-<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery-1.7.1.min.js" type="text/javascript"></script>
 <!-- jQuery Mobile Global Configuration Overrides -->
 <script>
 $(document).bind("mobileinit", function(){
@@ -33,94 +33,170 @@ $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "none";
 	// Graphical Performance Fix
 	$.mobile.transitionFallbacks.slideout = "none"
-	})
+	});
 </script>
 <!-- jQuery Mobile -->
-<script src="jquery.mobile-1.1.1.min.js"></script>
+<script src="jquery.mobile-1.1.1.min.js" type="text/javascript"></script>
+<!-- RSS Reader -->
+<script src="jquery.rss.min.js" type="text/javascript"></script>
 <!-- The Application code -->
-<script src="jquery.jb.js"></script>
+<script src="jquery.jb.js" type="text/javascript"></script>
 </head>
-<body>
-<div id="now-playing" data-role="page" data-dom-cache="true" data-theme="a">
-<div data-role="header" data-position="fixed"> 
-	<h1>JBlive.fm</h1>
-</div><!-- /header -->
-<div data-role="content" data-transition="fade">
-<div><img src="images/icons-cd-case.png"></div>
-<a id="btnPlayPauseStop" href="#" data-role="button" data-inline="true">Play</a>
-</div><!-- /content -->
-<div data-role="footer" data-position="fixed" data-transition="none">
-<div id="main-nav-bar" data-role="navbar">
-	<ul>
-		<li><a href="#now-playing" class="ui-btn-active ui-state-persist">Now Playing</a></li>
-		<li><a href="#shows">Shows</a></li>
-		<li><a href="#settings">Settings</a></li>
-	</ul>
-</div><!-- /navbar -->
-</div><!-- /footer -->
-</div><!-- /page:Now Playing-->
-<div id="shows" data-role="page" data-dom-cache="true" data-theme="a">
-<div data-role="header" data-position="fixed"> 
-	<h1>Shows</h1>
-	<div data-role="header" data-position="fixed"> 
-			<div data-role="controlgroup" data-type="horizontal" data-inline="true" >
-			<a href="#" data-role="button" class="ui-btn-active ui-state-persist">Live</a>
-			<a href="#" data-role="button">All</a>
-			<a href="#" data-role="button">Series</a>
-			<a href="#" data-role="button">Reminders</a>
-			</div>
-	</div>
-</div><!-- /header -->
-<div data-role="content">
-<ul data-role="listview">
-<li>
-	<a href="#" class="ui-link-inherit">
-		<img src="images/icons-cd-case.png" class="ui-li-icon">
-		<h3 class="ui-li-heading">JBlive.AM</h3>
-		<p class="ui-li-desc">Listen Live (Low Quality)</p>
-	</a>
-</li>
-<li>
-	<a href="#" class="ui-link-inherit">
-		<img src="images/icons-cd-case.png" class="ui-li-icon">
-		<h3 class="ui-li-heading">JBlive.FM</h3>
-		<p class="ui-li-desc">Listen Live (High Quality)</p>
-	</a>
-</li>
-<li>
-	<a href="#" class="ui-link-inherit">
-		<img src="images/icons-cd-case.png" class="ui-li-icon">
-		<h3 class="ui-li-heading">JBlive.TV</h3>
-		<p class="ui-li-desc">Watch Live</p>
-	</a>
-</li>
+	<body>
+		<div id="now-playing" data-role="page" data-dom-cache="true" data-theme="a">
 
-</ul>
-</div><!-- /content -->
-<div data-role="footer" data-position="fixed" data-transition="none">
-<div id="main-nav-bar" data-role="navbar">
-	<ul>
-		<li><a href="#now-playing">Now Playing</a></li>
-		<li><a href="#shows" class="ui-btn-active ui-state-persist">Shows</a></li>
-		<li><a href="#settings">Settings</a></li>
-	</ul>
-</div><!-- /navbar -->
-</div><!-- /footer -->
-</div><!-- /page:Shows -->
-<div id="settings" data-role="page" data-dom-cache="true" data-theme="a">
-<div data-role="header" data-position="fixed"> 
-	<h1>Settings</h1> 
-</div>
-<div data-role="content">Settings</div>
-<div data-role="footer" data-position="fixed" data-transition="none">
-<div id="main-nav-bar" data-role="navbar">
-	<ul>
-		<li><a href="#now-playing">Now Playing</a></li>
-		<li><a href="#shows">Shows</a></li>
-		<li><a href="#settings" class="ui-btn-active ui-state-persist">Settings</a></li>
-	</ul>
-</div><!-- /navbar -->
-</div><!-- /footer -->
-</div><!-- /page:Settings -->
-</body>
+			<div data-role="header" data-position="fixed"> 
+				<h1>JBlive.fm</h1>
+			</div><!-- /header -->
+
+			<div data-role="content" data-transition="fade">
+				<div><img src="images/icons-cd-case.png"></div>
+				<a id="btnPlayPauseStop" href="#" data-role="button" data-inline="true">Play</a>
+			</div><!-- /content -->
+
+			<div data-role="footer" data-position="fixed" data-transition="none">
+				<div id="main-nav-bar" data-role="navbar">
+					<ul>
+						<li><a href="#now-playing" class="ui-btn-active ui-state-persist">Now Playing</a></li>
+						<li><a href="#shows">Shows</a></li>
+						<li><a href="#settings">Settings</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+
+		</div><!-- /page:Now Playing-->
+
+
+		<div id="shows" data-role="page" data-dom-cache="true" data-theme="a">
+			<div data-role="header" data-position="fixed"> 
+				<h1>Shows</h1>
+				<div data-role="header" data-position="fixed"> 
+						<div data-role="controlgroup" data-type="horizontal" data-inline="true" >
+							<a href="#" data-role="button" class="ui-btn-active ui-state-persist">Live</a>
+							<a href="#feed" data-role="button" id="feed-button">Feed</a>
+							<a href="#series" data-role="button" id="series">Series</a>
+							<a href="#" data-role="button">Reminders</a>
+						</div>
+				</div>
+			</div><!-- /header -->
+			<div data-role="content">
+			<ul data-role="listview">
+			<li>
+				<a href="#" class="ui-link-inherit">
+					<img src="images/icons-cd-case.png" class="ui-li-icon">
+					<h3 class="ui-li-heading">JBlive.AM</h3>
+					<p class="ui-li-desc">Listen Live (Low Quality)</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="ui-link-inherit">
+					<img src="images/icons-cd-case.png" class="ui-li-icon">
+					<h3 class="ui-li-heading">JBlive.FM</h3>
+					<p class="ui-li-desc">Listen Live (High Quality)</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="ui-link-inherit">
+					<img src="images/icons-cd-case.png" class="ui-li-icon">
+					<h3 class="ui-li-heading">JBlive.TV</h3>
+					<p class="ui-li-desc">Watch Live</p>
+				</a>
+			</li>
+
+			</ul>
+			</div><!-- /content -->
+			<div data-role="footer" data-position="fixed" data-transition="none">
+				<div id="main-nav-bar" data-role="navbar">
+					<ul>
+						<li><a href="#now-playing">Now Playing</a></li>
+						<li><a href="#shows" class="ui-btn-active ui-state-persist">Shows</a></li>
+						<li><a href="#settings">Settings</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /page:Shows -->
+
+
+		<div id="settings" data-role="page" data-dom-cache="true" data-theme="a">
+			<div data-role="header" data-position="fixed"> 
+				<h1>Settings</h1> 
+			</div>
+			<div data-role="content">Settings</div>
+			<div data-role="footer" data-position="fixed" data-transition="none">
+				<div id="main-nav-bar" data-role="navbar">
+					<ul>
+						<li><a href="#now-playing">Now Playing</a></li>
+						<li><a href="#shows">Shows</a></li>
+						<li><a href="#settings" class="ui-btn-active ui-state-persist">Settings</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /page:Settings -->
+
+		<div id="series" data-role="page" data-dom-cache="true" data-theme="a">
+			<div data-role="header" data-position="fixed"> 
+				<h1>Shows</h1>
+				<div data-role="header" data-position="fixed"> 
+						<div data-role="controlgroup" data-type="horizontal" data-inline="true" >
+							<a href="#shows" data-role="button">Live</a>
+							<a href="#feed" data-role="button" id="feed-button">Feed</a>
+							<a href="#series" data-role="button" class="ui-btn-active ui-state-persist" id="series">Series</a>
+							<a href="#" data-role="button">Reminders</a>
+						</div>
+				</div>
+			</div><!-- /header -->
+			<div data-role="content">
+				<div id="series-holder"></div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-transition="none">
+				<div id="main-nav-bar" data-role="navbar">
+					<ul>
+						<li><a href="#now-playing">Now Playing</a></li>
+						<li><a href="#shows" class="ui-btn-active ui-state-persist">Shows</a></li>
+						<li><a href="#settings">Settings</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /page:Series -->
+
+		<div id="feed" data-role="page" data-dom-cache="true" data-theme="a">
+			<div data-role="header" data-position="fixed"> 
+				<h1>Shows</h1>
+				<div data-role="header" data-position="fixed"> 
+						<div data-role="controlgroup" data-type="horizontal" data-inline="true" >
+							<a href="#shows" data-role="button">Live</a>
+							<a href="#feed" data-role="button" id="feed-button" class="ui-btn-active ui-state-persist">Feed</a>
+							<a href="#series" data-role="button" id="series">Series</a>
+							<a href="#" data-role="button">Reminders</a>
+						</div>
+				</div>
+			</div><!-- /header -->
+			<div data-role="content">
+				<div id="feed-holder"></div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-transition="none">
+				<div id="main-nav-bar" data-role="navbar">
+					<ul>
+						<li><a href="#now-playing">Now Playing</a></li>
+						<li><a href="#shows" class="ui-btn-active ui-state-persist">Shows</a></li>
+						<li><a href="#settings">Settings</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /page:Series -->
+
+		
+	</body>
+
+	<script type="text/javascript">
+		$(function(){
+			$('#feed-button').click(function(){
+				if (jb.feed.firstGet === true){
+					jb.feed.firstGet = false;
+					jb.feed.get();
+				}
+			});
+		});
+	</script>
+
 </html>
