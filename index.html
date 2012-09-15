@@ -40,11 +40,9 @@ Copyright [2012] [Fingertip Tech, INC]
 		<!-- page:Now Playing -->
 		<div id="now-playing" data-role="page" data-dom-cache="true" data-theme="a">
 			<div data-role="header" data-position="fixed"> 
-				<h1>JBlive.fm</h1>
+				<h1 id="nowplayingtitle">Nothing playing</h1>
 			</div><!-- /header -->
 			<div data-role="content" data-transition="fade">
-				<div><img src="images/icons-cd-case.png"></div>
-				<a id="btnPlayPauseStop" href="#" data-role="button" data-inline="true" data-icon="play" data-iconpos="notext"></a>
 			</div><!-- /content -->
 			<div data-role="footer" data-position="fixed" data-transition="none">
 				<div id="main-nav-bar" data-role="navbar">
@@ -73,21 +71,21 @@ Copyright [2012] [Fingertip Tech, INC]
 			<div data-role="content">
 			<ul data-role="listview">
 			<li data-icon="play">
-				<a href="#" class="ui-link-inherit">
+				<a href="#" class="ui-link-inherit" onclick="jb.player.play('JBlive.AM')">
 					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.AM</h3>
 					<p class="ui-li-desc">Listen Live (Low Quality)</p>
 				</a>
 			</li>
 			<li data-icon="play">
-				<a href="#" class="ui-link-inherit">
+				<a href="#" class="ui-link-inherit" onclick="jb.player.play('JBlive.FM')">
 					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.FM</h3>
 					<p class="ui-li-desc">Listen Live (High Quality)</p>
 				</a>
 			</li>
 			<li data-icon="play">
-				<a href="#" class="ui-link-inherit">
+				<a href="#" class="ui-link-inherit" onclick="jb.player.play('JBlive.TV')">
 					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.TV</h3>
 					<p class="ui-li-desc">Watch Live</p>

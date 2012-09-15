@@ -19,8 +19,10 @@ var jb = {
 	'player' : {
 		'isPlaying': false,
 		'url' : null,
-		'play' : function (url) {
+		'play' : function (key) {
 			'use strict';
+			$('#nowplayingtitle').replaceWith('<h1 id="nowplayingtitle" class="ui-title" role="heading" aria-level="1">' + key + '</h1>');
+			$.mobile.changePage('#now-playing');
 		},
 		'stop' : function () {
 			'use strict';
@@ -32,11 +34,6 @@ var jb = {
 			'use strict';
 		}
 	},
-	'url' : {
-		'get' : function () {
-			'use strict';
-		}
-	},
 	'latest' : {
 		'get' : function () {
 			'use strict';
@@ -45,7 +42,7 @@ var jb = {
 			}, url = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
 			$('div#latest-holder').rss(url, {
 				layoutTemplate: '<ul data-role="listview" data-theme="a" id="latest-list">{entries}</ul>',
-				entryTemplate: '<li data-icon=\"play\"><a href=\"#{title}\" class=\"ui-link-inherit\"><img src=\"./images/icon-disk.png\" class=\"ui-li-thumb\"><h3 class=\"ui-li-heading\">{title}</h3><p class=\"ui-li-desc\">{shortBody}</p></a></li>'
+				entryTemplate: '<li data-icon=\"play\"><a href=\"#\" onclick=\"jb.player.play(\'{title}	\')\" class=\"ui-link-inherit\"><img src=\"./images/icon-disk.png\" class=\"ui-li-thumb\"><h3 class=\"ui-li-heading\">{title}</h3><p class=\"ui-li-desc\">{shortBody}</p></a></li>'
 			}, callback);
 		},
 		'firstGet' : true
