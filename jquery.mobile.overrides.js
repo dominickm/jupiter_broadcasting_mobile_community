@@ -6,4 +6,6 @@ $(document).bind("mobileinit", function () {
 	$.mobile.defaultPageTransition = "none";
 	// Graphical Performance Fix
 	$.mobile.transitionFallbacks.slideout = "none";
+	// Orientation fix
+	$.mobile.orientationChangeEnabled = false;
 });

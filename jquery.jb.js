@@ -27,7 +27,7 @@ var jb = {
 		},
 		'pause' : function () {
 			'use strict';
-		}
+		},
 		'resume' : function () {
 			'use strict';
 		}
