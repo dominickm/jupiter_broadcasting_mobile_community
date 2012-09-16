@@ -37,13 +37,33 @@ var jb = {
 	'latest' : {
 		'get' : function () {
 			'use strict';
-			var callback = function () {
-				$('div#latest-holder > ul#latest-list').listview();
-			}, url = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
-			$('div#latest-holder').rss(url, {
-				layoutTemplate: '<ul data-role="listview" data-theme="a" id="latest-list">{entries}</ul>',
-				entryTemplate: '<li data-icon=\"play\"><a href=\"#\" onclick=\"jb.player.play(\'{title}	\')\" class=\"ui-link-inherit\"><img src=\"./images/icon-disk.png\" class=\"ui-li-thumb\"><h3 class=\"ui-li-heading\">{title}</h3><p class=\"ui-li-desc\">{shortBody}</p></a></li>'
-			}, callback);
+			var feed;
+			feed = new google.feeds.Feed('http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg');
+			feed.load(function (result) {
+				var entry, rssListStrring, feedMap;
+				if (!result.error) {
+					feedMap = {};
+					rssListStrring = '<ul data-role="listview" data-theme="a" id="latest-list"></ul>';
+					$('div#latest-holder').html(rssListStrring);
+					$.each(result.feed.entries, function () {
+						entry = this;
+						$('#latest-list').append('<li data-icon="play"><a ' +
+							'href="#" onclick="jb.player.play(\'' + entry.title + '\')" ' +
+							'class="ui-link-inherit"><img src="./images/icon-disk.png" ' +
+							'class="ui-li-thumb"><h3 class="ui-li-heading">' + entry.title +
+							'</h3><p class="ui-li-desc">' + entry.contentSnippet + '</p></a></li>');
+						//Object containing url,size and type eg.audio/mp3
+						feedMap[entry.title] = entry.mediaGroups[0].contents[0];
+					});
+					//Store the urls on the document because it safe to say
+					//thats not going to be deleted and its accessable everywhere
+					$(document).data('feedMap', feedMap);
+					$('div#latest-holder > ul#latest-list').listview();
+				} else {
+					//I'll handle this more gracefully later
+					console.log('Error getting feed');
+				}
+			});
 		},
 		'firstGet' : true
 	}
