@@ -47,7 +47,11 @@ var jb = {
 			feed.load(function (result) {
 				var entry, rssListStrring, feedMap;
 				if (!result.error) {
-					feedMap = {};
+					if ($(document).data('feedMap')) {
+						feedMap = $(document).data('feedMap');
+					} else {
+						feedMap = {};
+					}
 					rssListStrring = '<ul data-role="listview" data-theme="a" id="latest-list"></ul>';
 					$('div#latest-holder').html(rssListStrring);
 					$.each(result.feed.entries, function () {
