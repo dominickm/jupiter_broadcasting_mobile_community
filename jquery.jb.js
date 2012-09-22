@@ -21,8 +21,13 @@ var jb = {
 		'url' : null,
 		'play' : function (key) {
 			'use strict';
+			var feedMap, htmlPlayer;
 			$('#nowplayingtitle').replaceWith('<h1 id="nowplayingtitle" class="ui-title" role="heading" aria-level="1">' + key + '</h1>');
 			$.mobile.changePage('#now-playing');
+			feedMap = $(document).data('feedMap');
+			htmlPlayer = $('#player')[0];
+			htmlPlayer.src = feedMap[key].url;
+			htmlPlayer.play();
 		},
 		'stop' : function () {
 			'use strict';
