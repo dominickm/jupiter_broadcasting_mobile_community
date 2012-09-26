@@ -58,7 +58,7 @@ var jb = {
 						entry = this;
 						$('#latest-list').append('<li data-icon="play"><a ' +
 							'href="#" onclick="jb.player.play(\'' + entry.title + '\')" ' +
-							'class="ui-link-inherit"><img src="./images/icon-disk.png" ' +
+							'class="ui-link-inherit"><img src="./resources/images/icon-disk.png" ' +
 							'class="ui-li-thumb"><h3 class="ui-li-heading">' + entry.title +
 							'</h3><p class="ui-li-desc">' + entry.contentSnippet + '</p></a></li>');
 						//Object containing url,size and type eg.audio/mp3
