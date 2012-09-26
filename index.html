@@ -15,31 +15,31 @@ Copyright [2012] [Fingertip Tech, INC]
  limitations under the License.
 -->
 <html>
-<head>
-<meta name="description" content="Jupiter Broadcasting Mobile Community Application 1.0">
-<!-- View port fix -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Cordova/PhoneGap -->
-<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-<!-- jQuery -->
-<link rel="stylesheet" href="jquery.mobile-1.1.1.min.css">
-<link rel="stylesheet" href="jquery.mobile.customicons.css">
-<script src="jquery-1.7.1.min.js" type="text/javascript"></script>
-<!-- jQuery Mobile Global Configuration Overrides -->
-<script type="text/javascript" src="jquery.mobile.overrides.js"></script>
-<!-- jQuery Mobile -->
-<script src="jquery.mobile-1.1.1.min.js" type="text/javascript"></script>
-<!-- RSS Reader -->
-<!--<script src="jquery.rss.min.js" type="text/javascript"></script>-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-	google.load("feeds", "1");
-</script>
-<!-- The Application code -->
-<script src="jquery.jb.js" type="text/javascript"></script>
-<!-- The Application Event Handline code -->
-<script src="jquery.jb.events.js" type="text/javascript"></script>
-</head>
+	<head>
+		<meta name="description" content="Jupiter Broadcasting Mobile Community Application 1.0">
+		<!-- View port fix -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Cordova/PhoneGap -->
+		<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+		<!-- jQuery -->
+		<link rel="stylesheet" href="resources/jquery/jquery.mobile-1.1.1.min.css">
+		<link rel="stylesheet" href="resources/jquery/jquery.mobile.customicons.css">
+		<script src="resources/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+		<!-- jQuery Mobile Global Configuration Overrides -->
+		<script type="text/javascript" src="resources/jquery/jquery.mobile.overrides.js"></script>
+		<!-- jQuery Mobile -->
+		<script type="text/javascript" src="resources/jquery/jquery.mobile-1.1.1.min.js"></script>
+		<!-- RSS Reader -->
+		<!--<script src="jquery.rss.min.js" type="text/javascript"></script>-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load("feeds", "1");
+		</script>
+		<!-- The Application code -->
+		<script type="text/javascript" src="resources/js/jquery.jb.js"></script>
+		<!-- The Application Event Handline code -->
+		<script type="text/javascript" src="resources/js/jquery.jb.events.js"></script>
+	</head>
 	<body>
 		<!-- page:Now Playing -->
 		<div id="now-playing" data-role="page" data-dom-cache="true" data-theme="a">
@@ -77,21 +77,21 @@ Copyright [2012] [Fingertip Tech, INC]
 			<ul data-role="listview">
 			<li data-icon="play">
 				<a href="#" class="ui-link-inherit" onclick="jb.player.play('JBlive.AM')">
-					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
+					<img src="resources/images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.AM</h3>
 					<p class="ui-li-desc">Listen Live (Low Quality)</p>
 				</a>
 			</li>
 			<li data-icon="play">
 				<a href="#" class="ui-link-inherit" onclick="jb.player.play('JBlive.FM')">
-					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
+					<img src="resources/images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.FM</h3>
 					<p class="ui-li-desc">Listen Live (High Quality)</p>
 				</a>
 			</li>
 			<li data-icon="play">
 				<a href="#" class="ui-link-inherit" onclick="jb.player.play('JBlive.TV')">
-					<img src="images/icon-aerial-portable.png" class="ui-li-thumb">
+					<img src="resources/images/icon-aerial-portable.png" class="ui-li-thumb">
 					<h3 class="ui-li-heading">JBlive.TV</h3>
 					<p class="ui-li-desc">Watch Live</p>
 				</a>
