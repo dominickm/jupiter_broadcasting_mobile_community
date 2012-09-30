@@ -25,9 +25,10 @@ var jb = {
 			$('#nowplayingtitle').replaceWith('<h1 id="nowplayingtitle" class="ui-title" role="heading" aria-level="1">' + key + '</h1>');
 			$.mobile.changePage('#now-playing');
 			feedMap = $(document).data('feedMap');
-			htmlPlayer = $('#player')[0];
-			htmlPlayer.src = feedMap[key].url;
-			htmlPlayer.play();
+			htmlPlayer = $('#jquery_jplayer')[0];
+			$(htmlPlayer).jPlayer('setMedia', {
+				'oga' : feedMap[key].url
+			}).jPlayer('play');
 		},
 		'stop' : function () {
 			'use strict';

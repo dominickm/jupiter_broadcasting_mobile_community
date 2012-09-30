@@ -19,8 +19,8 @@ Copyright [2012] [Fingertip Tech, INC]
 		<meta name="description" content="Jupiter Broadcasting Mobile Community Application 1.0">
 		<!-- View port fix -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Cordova/PhoneGap -->
-		<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+		<!-- Cordova/PhoneGap 
+		<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>-->
 		<!-- jQuery -->
 		<link rel="stylesheet" href="resources/jquery/jquery.mobile-1.1.1.min.css">
 		<link rel="stylesheet" href="resources/jquery/jquery.mobile.customicons.css">
@@ -35,6 +35,13 @@ Copyright [2012] [Fingertip Tech, INC]
 		<script type="text/javascript">
 			google.load("feeds", "1");
 		</script>
+		<!-- JPlayer -->
+		<link rel="stylesheet" href="resources/jplayer/circle.player.css">
+		<script type="text/javascript" src="resources/jplayer/jquery.transform.js"></script>
+		<script type="text/javascript" src="resources/jplayer/jquery.grab.js"></script>
+		<script type="text/javascript" src="resources/jplayer/jquery.jplayer.min.js"></script>
+		<script type="text/javascript" src="resources/jplayer/mod.csstransforms.min.js"></script>
+		<script type="text/javascript" src="resources/jplayer/circle.player.js"></script>
 		<!-- The Application code -->
 		<script type="text/javascript" src="resources/js/jquery.jb.js"></script>
 		<!-- The Application Event Handline code -->
@@ -43,13 +50,29 @@ Copyright [2012] [Fingertip Tech, INC]
 		<script type="text/javascript" src="resources/js/jquery.jb.init.js"></script>
 	</head>
 	<body>
+		
 		<!-- page:Now Playing -->
 		<div id="now-playing" data-role="page" data-dom-cache="true" data-theme="a">
 			<div data-role="header" data-position="fixed"> 
 				<h1 id="nowplayingtitle">Nothing playing</h1>
 			</div><!-- /header -->
+			<div id="jquery_jplayer" class="cp-jplayer"></div>
 			<div data-role="content" data-transition="fade">
-			<audio id="player" autoplay="true" controls="controls"></audio>
+				<div id="cp_container" class="cp-container">
+					<div class="cp-buffer-holder">
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>
+					<div class="cp-progress-holder">
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls">
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+					</ul>
+				</div>
 			</div><!-- /content -->
 			<div data-role="footer" data-position="fixed" data-transition="none">
 				<div id="main-nav-bar" data-role="navbar">
