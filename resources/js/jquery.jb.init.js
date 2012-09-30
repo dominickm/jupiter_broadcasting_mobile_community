@@ -11,4 +11,9 @@ $(document).ready(function () {
 		'size': -1
 		};
 	$(document).data('feedMap', feedMap);
+	new CirclePlayer('#jquery_jplayer',
+	{}, 
+	{
+		'cssSelectorAncestor': '#cp_container'
+	});
 });
