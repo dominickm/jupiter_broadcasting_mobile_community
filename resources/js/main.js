@@ -33,6 +33,9 @@ jb.feed = {};
 //Ogg feed url
 jb.feed._OGG_FEED = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg';
 
+//Default number of feed entries
+jb.feed.numEntries = 10;
+
 /**
  * Gets the feed that is passed in and returns the results
  * @url: The url of the feed to get
@@ -41,6 +44,7 @@ jb.feed._OGG_FEED = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg'
 jb.feed.get = function(url, callback) {
 	var feed;
 	feed = new google.feeds.Feed(url);
+	feed.setNumEntries(this.numEntries);
 	feed.load(callback);
 }
 
