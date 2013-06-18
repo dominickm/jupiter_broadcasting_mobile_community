@@ -40,7 +40,7 @@ jb.feed._OGG_FEED = 'http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg'
  */
 jb.feed.get = function(url, callback) {
 	var feed;
-	feed = new google.feeds.Feed('http://feeds.feedburner.com/AllJupiterBroadcastingShowsOgg');
+	feed = new google.feeds.Feed(url);
 	feed.load(callback);
 }
 
